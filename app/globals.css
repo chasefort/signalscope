@@ -1,0 +1,67 @@
+@import "tailwindcss";
+
+@theme {
+  --color-ink: #0b0e13;
+  --color-panel: #11161f;
+  --color-panel-2: #161d29;
+  --color-line: #232c3b;
+  --color-fg: #e8edf4;
+  --color-mut: #8b97a8;
+  --color-dim: #5c6878;
+  --color-signal: #51e3a4;
+  --color-signal-dim: #2a7d5c;
+  --color-amber: #f2b84b;
+  --color-red: #f06a6a;
+
+  --font-sans: var(--font-grotesk), system-ui, sans-serif;
+  --font-mono: var(--font-plex-mono), ui-monospace, monospace;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--color-ink);
+  color: var(--color-fg);
+  font-family: var(--font-sans);
+}
+
+/* subtle scanline texture for the console feel */
+.scanlines {
+  background-image: repeating-linear-gradient(
+    0deg,
+    rgba(255, 255, 255, 0.012) 0px,
+    rgba(255, 255, 255, 0.012) 1px,
+    transparent 1px,
+    transparent 3px
+  );
+}
+
+::selection {
+  background: rgba(81, 227, 164, 0.25);
+}
+
+@keyframes pulse-dot {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.25; }
+}
+.pulse-dot {
+  animation: pulse-dot 1.2s ease-in-out infinite;
+}
+
+@keyframes rise-in {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.rise-in {
+  animation: rise-in 0.35s ease-out both;
+}
+
+.evidence-flash {
+  animation: evidence-flash 1.6s ease-out;
+}
+@keyframes evidence-flash {
+  0% { background-color: rgba(81, 227, 164, 0.18); border-color: rgba(81, 227, 164, 0.6); }
+  100% { background-color: transparent; }
+}

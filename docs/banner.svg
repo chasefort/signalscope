@@ -1,0 +1,155 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 380" width="1280" height="380" role="img" aria-label="SignalScope — live brand and market monitoring for GTM teams">
+  <title>SignalScope — turn live market noise into a cited GTM intelligence report</title>
+
+  <defs>
+    <!-- ambient glow over the evidence cluster -->
+    <radialGradient id="glow" cx="74%" cy="42%" r="60%">
+      <stop offset="0%"  stop-color="#51e3a4" stop-opacity="0.16"/>
+      <stop offset="45%" stop-color="#51e3a4" stop-opacity="0.05"/>
+      <stop offset="100%" stop-color="#51e3a4" stop-opacity="0"/>
+    </radialGradient>
+
+    <!-- card shimmer sweep -->
+    <linearGradient id="shimmer" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%"  stop-color="#51e3a4" stop-opacity="0"/>
+      <stop offset="50%" stop-color="#51e3a4" stop-opacity="0.10"/>
+      <stop offset="100%" stop-color="#51e3a4" stop-opacity="0"/>
+    </linearGradient>
+
+    <!-- scanline texture (brand signature) -->
+    <pattern id="scanlines" width="4" height="3" patternUnits="userSpaceOnUse">
+      <rect width="4" height="1" fill="#ffffff" opacity="0.014"/>
+    </pattern>
+
+    <filter id="soft" x="-60%" y="-60%" width="220%" height="220%">
+      <feGaussianBlur stdDeviation="3"/>
+    </filter>
+
+    <clipPath id="cardsClip">
+      <rect x="812" y="78" width="404" height="252" rx="14"/>
+    </clipPath>
+
+    <style>
+      .mono { font-family: 'IBM Plex Mono','SF Mono',ui-monospace,Menlo,monospace; }
+      .sans { font-family: 'Space Grotesk','Segoe UI',Helvetica,Arial,sans-serif; }
+    </style>
+  </defs>
+
+  <!-- base -->
+  <rect width="1280" height="380" fill="#0b0e13"/>
+  <rect width="1280" height="380" fill="url(#glow)">
+    <animate attributeName="opacity" values="0.7;1;0.7" dur="7s" repeatCount="indefinite"/>
+  </rect>
+  <rect width="1280" height="380" fill="url(#scanlines)"/>
+
+  <!-- ================= LEFT: identity + headline ================= -->
+
+  <!-- signal node glyph -->
+  <circle cx="64" cy="74" r="6" fill="#51e3a4" filter="url(#soft)">
+    <animate attributeName="opacity" values="1;0.35;1" dur="2.2s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="64" cy="74" r="3.4" fill="#51e3a4"/>
+
+  <!-- wordmark -->
+  <text x="84" y="82" class="mono" font-size="30" font-weight="600" letter-spacing="-0.5">
+    <tspan fill="#e8edf4">signal</tspan><tspan fill="#51e3a4">scope</tspan>
+  </text>
+
+  <!-- tagline chip -->
+  <g>
+    <rect x="86" y="100" width="290" height="26" rx="13" fill="none" stroke="#232c3b"/>
+    <text x="100" y="117" class="mono" font-size="11" letter-spacing="2.6" fill="#5c6878">MARKET INTELLIGENCE FOR GTM</text>
+  </g>
+
+  <!-- headline -->
+  <text x="62" y="196" class="sans" font-size="40" font-weight="600" letter-spacing="-1" fill="#e8edf4">Live market noise in.</text>
+  <text x="62" y="246" class="sans" font-size="40" font-weight="600" letter-spacing="-1">
+    <tspan fill="#51e3a4">Cited GTM intel</tspan><tspan fill="#e8edf4"> out.</tspan>
+  </text>
+  <!-- cursor -->
+  <rect x="486" y="216" width="15" height="32" fill="#51e3a4">
+    <animate attributeName="opacity" values="1;1;0;0" dur="1.1s" repeatCount="indefinite"/>
+  </rect>
+
+  <!-- sub line -->
+  <text x="64" y="298" class="mono" font-size="14" fill="#8b97a8">
+    <tspan fill="#5c6878">fetch </tspan>news · hacker news · gdelt<tspan fill="#5c6878">  →  </tspan>AI triage<tspan fill="#5c6878">  →  </tspan>cited report
+  </text>
+
+  <!-- ================= RIGHT: live evidence stack ================= -->
+  <g clip-path="url(#cardsClip)">
+    <!-- card 1 -->
+    <g>
+      <rect x="824" y="84" width="380" height="70" rx="12" fill="#11161f" stroke="#232c3b"/>
+      <text x="842" y="116" class="mono" font-size="13" fill="#51e3a4">[1]</text>
+      <text x="872" y="114" class="sans" font-size="15" fill="#e8edf4">OpenAI cuts API prices</text>
+      <rect x="872" y="124" width="46" height="15" rx="3" fill="none" stroke="#f2b84b" stroke-opacity="0.5"/>
+      <text x="879" y="135" class="mono" font-size="9" fill="#f2b84b">NEWS</text>
+      <text x="926" y="135" class="mono" font-size="9.5" fill="#5c6878">The Information · Jun 10</text>
+      <rect x="1116" y="127" width="70" height="4" rx="2" fill="#232c3b"/>
+      <rect x="1116" y="127" width="63" height="4" rx="2" fill="#51e3a4"/>
+      <text x="1116" y="120" class="mono" font-size="9" fill="#5c6878" text-anchor="start">rel 9/10</text>
+    </g>
+    <!-- card 2 -->
+    <g>
+      <rect x="824" y="172" width="380" height="70" rx="12" fill="#11161f" stroke="#232c3b"/>
+      <text x="842" y="204" class="mono" font-size="13" fill="#51e3a4">[2]</text>
+      <text x="872" y="202" class="sans" font-size="15" fill="#e8edf4">Replaced our RAG with 1M ctx</text>
+      <rect x="872" y="212" width="30" height="15" rx="3" fill="none" stroke="#ff966b" stroke-opacity="0.5"/>
+      <text x="879" y="223" class="mono" font-size="9" fill="#ff966b">HN</text>
+      <text x="910" y="223" class="mono" font-size="9.5" fill="#5c6878">Hacker News · ▲ 412</text>
+      <rect x="1116" y="215" width="70" height="4" rx="2" fill="#232c3b"/>
+      <rect x="1116" y="215" width="56" height="4" rx="2" fill="#51e3a4"/>
+      <text x="1116" y="208" class="mono" font-size="9" fill="#5c6878">rel 8/10</text>
+    </g>
+    <!-- card 3 -->
+    <g>
+      <rect x="824" y="260" width="380" height="70" rx="12" fill="#11161f" stroke="#232c3b"/>
+      <text x="842" y="292" class="mono" font-size="13" fill="#51e3a4">[3]</text>
+      <text x="872" y="290" class="sans" font-size="15" fill="#e8edf4">Mistral signs EU gov deals</text>
+      <rect x="872" y="300" width="52" height="15" rx="3" fill="none" stroke="#7fb4f5" stroke-opacity="0.5"/>
+      <text x="879" y="311" class="mono" font-size="9" fill="#7fb4f5">GDELT</text>
+      <text x="932" y="311" class="mono" font-size="9.5" fill="#5c6878">reuters.com · Jun 8</text>
+      <rect x="1116" y="303" width="70" height="4" rx="2" fill="#232c3b"/>
+      <rect x="1116" y="303" width="56" height="4" rx="2" fill="#51e3a4"/>
+      <text x="1116" y="296" class="mono" font-size="9" fill="#5c6878">rel 8/10</text>
+    </g>
+
+    <!-- triage scan sweep across the stack -->
+    <rect x="812" y="78" width="404" height="44" fill="url(#shimmer)">
+      <animateTransform attributeName="transform" type="translate" values="0 -60; 0 256; 0 256" keyTimes="0;0.7;1" dur="3.8s" repeatCount="indefinite"/>
+    </rect>
+    <rect x="812" y="120" width="404" height="2" fill="#51e3a4" opacity="0.55">
+      <animateTransform attributeName="transform" type="translate" values="0 -44; 0 212; 0 212" keyTimes="0;0.7;1" dur="3.8s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0;0.55;0;0" keyTimes="0;0.35;0.7;1" dur="3.8s" repeatCount="indefinite"/>
+    </rect>
+  </g>
+
+  <!-- evidence label -->
+  <text x="824" y="68" class="mono" font-size="10.5" letter-spacing="2.4" fill="#5c6878">EVIDENCE — LIVE SIGNALS</text>
+
+  <!-- ================= BOTTOM: pipeline rail ================= -->
+  <g>
+    <line x1="64" y1="350" x2="1216" y2="350" stroke="#232c3b"/>
+
+    <!-- stage nodes -->
+    <g class="mono" font-size="11" letter-spacing="1.5">
+      <circle cx="120" cy="350" r="4" fill="#51e3a4"/>
+      <text x="134" y="354" fill="#8b97a8">01 / COLLECT</text>
+      <circle cx="560" cy="350" r="4" fill="#51e3a4"/>
+      <text x="574" y="354" fill="#8b97a8">02 / TRIAGE</text>
+      <circle cx="980" cy="350" r="4" fill="#51e3a4"/>
+      <text x="994" y="354" fill="#8b97a8">03 / SYNTHESIZE</text>
+    </g>
+
+    <!-- traveling pulse -->
+    <circle cy="350" r="5" fill="#51e3a4" filter="url(#soft)">
+      <animate attributeName="cx" values="64;1216" dur="6s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0;1;1;1;0" dur="6s" repeatCount="indefinite"/>
+    </circle>
+    <circle cy="350" r="2.4" fill="#e8edf4">
+      <animate attributeName="cx" values="64;1216" dur="6s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0;1;1;1;0" dur="6s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+</svg>
