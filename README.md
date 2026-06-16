@@ -16,6 +16,18 @@ It is designed for the gap between raw alerts and useful strategy: collect the s
 4. **Cites every claim** with evidence chips that jump back to the source signal.
 5. **Exports Markdown** for sharing or follow-up analysis.
 
+## Business Applications
+
+SignalScope is a reference pattern for turning noisy public information into decision-ready intelligence. The same architecture can support:
+
+- **Competitive intelligence:** monitor launches, pricing changes, positioning shifts, partnerships, and hiring signals across a market.
+- **Brand and reputation monitoring:** separate meaningful coverage from keyword noise and summarize changes in sentiment or narrative.
+- **Sales and account planning:** watch named accounts, competitors, and industry events so reps can personalize outreach with current evidence.
+- **Founder or investor research:** track emerging categories, company momentum, and market risks without manually checking multiple sources.
+- **Customer success risk detection:** monitor public complaints, outages, competitor mentions, or regulatory events that may affect key accounts.
+
+The core transferable idea is a source-grounded intelligence pipeline: collect broad signals, filter them cheaply, synthesize only the relevant evidence, and keep the final recommendation auditable.
+
 ## Pipeline
 
 ```text
@@ -50,6 +62,14 @@ Review
 | Structured output | Zod schemas for requests, signals, stream events, and reports |
 | Streaming | NDJSON progress events from `app/api/monitor/route.ts` |
 | Evidence | Server strips invented citation IDs before the UI renders claims |
+
+## Transferable Implementation Patterns
+
+- **Two-pass AI pipeline:** a fast triage step reduces cost and noise before the higher-quality synthesis step.
+- **Adapter-based source ingestion:** each signal source is isolated behind a small adapter, making it straightforward to add domain-specific feeds later.
+- **Schema-checked reports:** Zod schemas define the shape of requests, stream events, signals, and reports so the UI can trust the API contract.
+- **Auditable recommendations:** the report is only useful if a reviewer can inspect the supporting signal; citation filtering happens server-side before rendering.
+- **Progressive streaming UX:** users see collection, triage, and synthesis progress instead of waiting on a silent long-running request.
 
 ## Run Locally
 
