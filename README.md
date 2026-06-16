@@ -8,6 +8,10 @@
 
 It is designed for the gap between raw alerts and useful strategy: collect the signals, filter what matters, connect them to action, and keep every claim traceable to evidence.
 
+## Preview
+
+![SignalScope monitoring screenshot](docs/screenshot.png)
+
 ## What It Does
 
 1. **Collects live signals** from Google News RSS, Hacker News, GDELT, and optional Tavily search.
@@ -27,6 +31,16 @@ SignalScope is a reference pattern for turning noisy public information into dec
 - **Customer success risk detection:** monitor public complaints, outages, competitor mentions, or regulatory events that may affect key accounts.
 
 The core transferable idea is a source-grounded intelligence pipeline: collect broad signals, filter them cheaply, synthesize only the relevant evidence, and keep the final recommendation auditable.
+
+## Example Output
+
+A generated report includes:
+
+- **Executive summary:** what changed, why it matters, and what the GTM team should do next.
+- **Signal themes:** grouped market, brand, competitor, and customer signals with citations.
+- **Competitor moves:** notable launches, positioning shifts, partnerships, or public momentum.
+- **Opportunities and risks:** practical recommendations grounded in the collected evidence.
+- **Evidence panel:** source links and citation chips so reviewers can inspect the underlying signals.
 
 ## Pipeline
 
@@ -125,3 +139,7 @@ Set `ANTHROPIC_API_KEY` or `OPENAI_API_KEY` in Vercel. Add `TAVILY_API_KEY` if y
 - News snippets are shallow; a production version would fetch and summarize full article bodies for the top signals.
 - Reports are session-scoped and export-only; there is no saved history or week-over-week diffing.
 - Recency windows vary by source and are tuned for useful signal volume.
+
+## License
+
+MIT
