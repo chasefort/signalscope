@@ -1,6 +1,7 @@
 "use client";
 
 import { useRef, useState } from "react";
+import Link from "next/link";
 import { MonitorForm } from "@/components/MonitorForm";
 import { PipelineLog, type StageState } from "@/components/PipelineLog";
 import { ReportView } from "@/components/ReportView";
@@ -169,7 +170,19 @@ export default function Home() {
           </span>
           <span className="hidden font-mono text-[11px] text-dim sm:inline">/ market intelligence for GTM</span>
         </button>
-        <div className="flex items-center gap-3">
+        <div className="flex items-center gap-1 sm:gap-3">
+          <Link
+            href="/how-it-works"
+            className="hidden rounded-md px-3 py-1.5 font-mono text-xs text-mut transition-colors hover:text-signal sm:block"
+          >
+            how it works
+          </Link>
+          <Link
+            href="/tech"
+            className="hidden rounded-md px-3 py-1.5 font-mono text-xs text-mut transition-colors hover:text-signal sm:block"
+          >
+            tech
+          </Link>
           {phase === "done" && (
             <>
               <button
@@ -232,6 +245,21 @@ export default function Home() {
                 <p className="mt-2 text-[13px] leading-relaxed text-mut">{d}</p>
               </div>
             ))}
+          </div>
+
+          <div className="mt-4 flex flex-wrap gap-4">
+            <Link
+              href="/how-it-works"
+              className="font-mono text-xs text-dim underline-offset-4 transition-colors hover:text-signal hover:underline"
+            >
+              see a full run, start to finish →
+            </Link>
+            <Link
+              href="/tech"
+              className="font-mono text-xs text-dim underline-offset-4 transition-colors hover:text-signal hover:underline"
+            >
+              how it is built →
+            </Link>
           </div>
         </div>
       )}
