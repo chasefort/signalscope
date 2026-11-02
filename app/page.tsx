@@ -322,6 +322,11 @@ export default function Home() {
         SignalScope — live market-signal ingestion, two-stage AI analysis (fast-model
         triage → analyst-model synthesis), and evidence-grounded GTM reporting. Built with Next.js, the Vercel AI SDK
         (Anthropic or OpenAI), and keyless public data sources.
+        <p className="mt-3">
+          <a href="https://www.frontierresearch.xyz/" className="inline-flex min-h-11 items-center text-xs text-fg underline-offset-4 hover:underline focus-visible:outline-2 focus-visible:outline-offset-4">
+            By Chase Fort, founder of Frontier Research
+          </a>
+        </p>
       </footer>
     </div>
   );
